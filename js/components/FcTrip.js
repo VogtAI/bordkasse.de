@@ -74,7 +74,7 @@ function onInitTrip ({ currentTarget, detail }) {
         </li>
       </ul>
       <footer>
-        <a href="./" title="Home page" class="nav">❮ Home</a>
+        <a href="./" title="Home page" class="nav">❮ Ausfl&uuml;ge</a>
         <button to="add_expense" title="Ausgabe hinzuf&uuml;gen">Ausgabe hinzuf&uuml;gen</button>
         <a href="#" title="Refresh the expenses" role="button" class="nav" id="refresh_button">↻ Aktualisieren</a>
       </footer>
