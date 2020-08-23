@@ -66,7 +66,7 @@ function expenseItem (expense, members, flag = '') {
     <span class="title">${expense.title}</span>
     <data class="amount" value="${expense.amount}">${localPretty(expense.amount)}</data>
     <span class="description">
-      bezahlt von
+      ausgelegt von
       <span class="creditor">${expense.creditor}</span>
       <span class="participants ${isForAll ? 'all' : ''}">an ${smartList(expense.participants, members)}</span>
     </span>

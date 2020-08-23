@@ -10,7 +10,7 @@ export default function AddExpenseForm (members) {
     <input type="number" id="add_expense_amount" name="amount" step="0.01" required/>
 
     <div class="checkable-group">
-      <label>Bezahlt von</label>
+      <label>Ausgelegt von</label>
       <div id="creditor_choice"></div>
     </div>
 
