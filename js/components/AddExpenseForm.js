@@ -3,7 +3,7 @@ import { dispatch, generateId, goTo, html } from '../lib.js'
 export default function AddExpenseForm (members) {
   const form = html`
   <json-form class="add-expense" name="add_expense">
-    <label for="add_expense_title">Title</label>
+    <label for="add_expense_title">Titel</label>
     <input type="text" id="add_expense_title" name="title" autocomplete="off" required/>
 
     <label for="add_expense_amount">Betrag (EUR)</label>
