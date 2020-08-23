@@ -17,7 +17,7 @@ export default class FcHome extends HTMLElement {
 }
 
 const initState = () => fragment`
-  <h2>Let's start a trip</h2>
+  <h2>Neuen Ausflug erstellen</h2>
   ${InitTripForm()}
   <div class="known-trips">
     <h3>Vorherige Ausfl&uuml;ge</h3>

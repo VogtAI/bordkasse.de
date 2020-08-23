@@ -11,7 +11,7 @@ export default function InitTripForm () {
       <label>Wer ist dabei?</label>
       <item-list init-items="2" class="members minimum-count" onItem-list:update=${onMembersUpdate}>
         <template>
-          <input type="text" name="members[]" placeholder="Put a name here" minlength="1" required/>
+          <input type="text" name="members[]" placeholder="Name eintragen" minlength="1" required/>
         </template>
         <button type="button" class="add">+</button>
       </item-list>

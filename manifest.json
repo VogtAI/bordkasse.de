@@ -1,10 +1,10 @@
 {
- "name": "Freecount",
- "short_name": "Freecount",
+ "name": "Bordkasse.de",
+ "short_name": "Bordkasse",
  "start_url": ".",
  "display": "standalone",
  "background_color": "#004643",
- "description": "Share expense among friends",
+ "description": "Ausgaben mit Freunden teilen",
  "icons": [
   {
    "src": ".\/logo\/android-icon-36x36.png",

@@ -25,7 +25,7 @@ const routes = [
   // App logic
   ['workerupdate', () => {
     showNotification({
-      message: 'A new version of Freecount has been installed in the background.',
+      message: 'Bordkasse wurde im Hintergrund aktualisiert',
       controls: ['Reload']
     }).then(_ => location.reload())
   }]
@@ -57,7 +57,7 @@ export default function main () {
       window.location.assign(newUrl.href)
     }],
     ['app:did_init_trip', ({ detail }) => {
-      document.title = `${detail.name} | Freecount`
+      document.title = `${detail.name} | Bordkasse`
     }],
     ['local:fetch', ({ target }) => {
       withStored('known_trips', {}, (trips) => {
