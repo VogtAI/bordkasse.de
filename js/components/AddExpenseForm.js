@@ -6,16 +6,16 @@ export default function AddExpenseForm (members) {
     <label for="add_expense_title">Title</label>
     <input type="text" id="add_expense_title" name="title" autocomplete="off" required/>
 
-    <label for="add_expense_amount">Amount (EUR)</label>
+    <label for="add_expense_amount">Betrag (EUR)</label>
     <input type="number" id="add_expense_amount" name="amount" step="0.01" required/>
 
     <div class="checkable-group">
-      <label>Paid by</label>
+      <label>Bezahlt von</label>
       <div id="creditor_choice"></div>
     </div>
 
     <div class="checkable-group">
-      <label>Applies to</label>
+      <label>Verwendet von</label>
       <div id="participants_choice"></div>
     </div>
 
@@ -25,8 +25,8 @@ export default function AddExpenseForm (members) {
 
     <p class="errors"></p>
 
-    <input type="submit" name="submit" value="Add" />
-    <button type="button" title="Cancel" to="expenses" class="cancel">Cancel</button>
+    <input type="submit" name="submit" value="Hinzuf&uuml;gen" />
+    <button type="button" title="Cancel" to="expenses" class="cancel">Abbrechen</button>
   </json-form>`
 
   // Can't simply use a map with the template because it would need to be flattended
@@ -53,11 +53,11 @@ export default function AddExpenseForm (members) {
 
 function validate (newExpense) {
   if (Number.isNaN(Number(newExpense.amount))) {
-    return [{ name: 'amount', error: 'Invalid amount. Please enter a valid number' }]
+    return [{ name: 'amount', error: 'Falscher Betrag. Bitte anpassen!' }]
   }
 
   if (!newExpense.participants || !newExpense.participants.length) {
-    return [{ error: 'Please choose who this expense applies to' }]
+    return [{ error: 'Wer verwendet diese Ausgabe?' }]
   }
 
   return []

@@ -5,10 +5,10 @@ const MIN_MEMBERS = 2
 export default function InitTripForm () {
   const form = html`
     <json-form name="init_trip" class="init-trip">
-      <label for="init_trip_name">Trip name</label>
+      <label for="init_trip_name">Name des Ausflugs</label>
       <input type="text" id="init_trip_name" name="name" autocomplete="off" required/>
       <input type="hidden" name="currency" value="EUR" readonly/>
-      <label>Who's joining?</label>
+      <label>Wer ist dabei?</label>
       <item-list init-items="2" class="members minimum-count" onItem-list:update=${onMembersUpdate}>
         <template>
           <input type="text" name="members[]" placeholder="Put a name here" minlength="1" required/>
@@ -16,11 +16,11 @@ export default function InitTripForm () {
         <button type="button" class="add">+</button>
       </item-list>
       <div class="toggle">
-        <label for="init_trip_password_toggle">Protect by password</label>
+        <label for="init_trip_password_toggle">Passwortschutz</label>
         <input type="checkbox" id="init_trip_password_toggle" onChange=${onPasswordToggle} />
       </div>
       <div class="errors"></div>
-      <input type="submit" name="submit" value="Go!"/>
+      <input type="submit" name="submit" value="Los gehts!"/>
     </json-form>`
 
   form.validate = validate
@@ -37,7 +37,7 @@ InitTripForm.style = `
 function validate (initTrip) {
   const uniqueMembers = new Set(initTrip.members)
   if (uniqueMembers.size !== initTrip.members.length) {
-    return [{ error: 'It looks like some people have the same name, please adjust' }]
+    return [{ error: 'Doppelter Name, bitte &auml;ndern!' }]
   }
 
   return []
@@ -54,9 +54,9 @@ function onPasswordToggle ({ target }) {
   if (target.checked && !passwordSection) {
     form.insertBefore(
       html`<div class="password-control form-like">
-            <label for="init_trip_password">Password</label>
+            <label for="init_trip_password">Passwort</label>
             <input id="init_trip_password" type="password" required/>
-            <small>All your data will be end-to-end encrypted with this password. Share it with the participants and don't lose it. Freecount can't recover it.</small>
+            <small>Deine Daten werden Ende zu Ende mit diesem Passwort verschl&uuml;sselt. Bordkasse speichert dieses nicht!</small>
           </div>`,
       target.parentNode.nextSibling
     )

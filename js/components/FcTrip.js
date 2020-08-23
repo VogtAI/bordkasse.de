@@ -62,27 +62,27 @@ function onRefreshButtonClicked (event) {
 function onInitTrip ({ currentTarget, detail }) {
   currentTarget.append(fragment`
     <menu>
-      <h2 to="expenses" class="active">Expenses</h2>
-      <h2 to="balance">Balance</h2>
+      <h2 to="expenses" class="active">Ausgaben</h2>
+      <h2 to="balance">Bilanz</h2>
     </menu>
     <section path="expenses">
       <div class="spinner"></div>
       <ul id="expense_list" class="expense-list">
         <li class="placeholder">
-          <p>You haven't spent anything yet, well done!</p>
-          <p>When someone buys something, just click on "Add an expense" below to record it.</p>
+          <p>Du hast bisher nichts ausgegeben.</p>
+          <p>Wenn jemand etwas ausgibt klicke einfach auf Ausgabe hinzuf&uuml;gen</p>
         </li>
       </ul>
       <footer>
         <a href="./" title="Home page" class="nav">❮ Home</a>
-        <button to="add_expense" title="Add an expense">Add an expense</button>
-        <a href="#" title="Refresh the expenses" role="button" class="nav" id="refresh_button">↻ Refresh</a>
+        <button to="add_expense" title="Ausgabe hinzuf&uuml;gen">Ausgabe hinzuf&uuml;gen</button>
+        <a href="#" title="Refresh the expenses" role="button" class="nav" id="refresh_button">↻ Aktualisieren</a>
       </footer>
     </section>
     <section path="balance">
       <dl id="balance_list" class="balance-list"></dl>
       <div class="debt-list">
-        <h4>How to balance?</h4>
+        <h4>Wie ausgleichen?</h4>
         <ul></ul>
       </div>
     </section>

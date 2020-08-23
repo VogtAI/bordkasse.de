@@ -5,10 +5,10 @@ export default class PasswordInputForm extends JsonForm {
   constructor () {
     super()
     this.append(fragment`
-      <h3>This freecount is password protected</h3>
-      <label for="password_input_password">Password</label>
+      <h3>Diese Bordkasse ist passwortgesch&uuml;tzt!</h3>
+      <label for="password_input_password">Passwort</label>
       <input type="password" id="password_input_password" name="password" required />
-      <input type="submit" value="Open the freecount" />
+      <input type="submit" value="Bordkasse &ouml;ffnen" />
       <div class="errors"></div>`
     )
   }

@@ -20,13 +20,9 @@ const initState = () => fragment`
   <h2>Let's start a trip</h2>
   ${InitTripForm()}
   <div class="known-trips">
-    <h3>Previous trips</h3>
+    <h3>Vorherige Ausfl&uuml;ge</h3>
     <ul></ul>
   </div>
-  <footer>
-    <span>&nbsp;</span>
-    <a href="https://github.com/ssimono/freecount" title="Freecount's source code">About</a>
-  </footer>
 `
 
 function onInitTripSubmit ({ target, detail }) {
@@ -54,7 +50,7 @@ function onKnownTripsLoaded ({ target, detail }) {
     .map(boxId => [boxId, detail[boxId]])
     .filter(([id, { title }]) => !!title)
     .map(([id, { title }]) =>
-      html`<li><a title="Open ${title}" href="./?box=${id}">${title}</a></li>`
+      html`<li><a title="&Ouml;ffne ${title}" href="./?box=${id}">${title}</a></li>`
     )
 
   dest.querySelector('ul').append(...items)

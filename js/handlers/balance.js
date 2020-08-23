@@ -41,7 +41,7 @@ export function onSettleUpClick ({ target, detail }) {
     date: (new Date()).toISOString().substr(0, 10),
     creditor: detail.debtor,
     participants: [ detail.creditor ],
-    title: "⚖ Settlement"
+    title: "⚖ Ausgleich"
   }
   target.addEventListener('http_request_stop', () => {
     dispatch(target, 'sync')
@@ -91,7 +91,7 @@ function renderDebts (target, debts) {
       <em>${debt.debtor}</em>
       gives <strong><data value="${debt.amount}">${localPretty(debt.amount)}</data></strong>
       to <em>${debt.creditor}</em>
-      <button title="Settle up" role="button">Settle up</button>
+      <button title="Settle up" role="button">Ausgleichen</button>
     </li>`
     const button = t.lastElementChild
     button.addEventListener('click', () => {
