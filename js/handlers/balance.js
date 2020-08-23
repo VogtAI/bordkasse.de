@@ -89,8 +89,8 @@ function renderDebts (target, debts) {
     const t = html`
     <li>
       <em>${debt.debtor}</em>
-      gives <strong><data value="${debt.amount}">${localPretty(debt.amount)}</data></strong>
-      to <em>${debt.creditor}</em>
+      gibt <strong><data value="${debt.amount}">${localPretty(debt.amount)}</data></strong>
+      an <em>${debt.creditor}</em>
       <button title="Settle up" role="button">Ausgleichen</button>
     </li>`
     const button = t.lastElementChild
