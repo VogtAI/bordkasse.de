@@ -1,4 +1,4 @@
-export function pretty (amount, showSign = false, locale = 'en-US') {
+export function pretty (amount, showSign = false, locale = 'de-DE') {
   const formatter = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' })
   let formatted = formatter.format(amount)
 
