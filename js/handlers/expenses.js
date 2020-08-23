@@ -66,7 +66,7 @@ function expenseItem (expense, members, flag = '') {
     <span class="title">${expense.title}</span>
     <data class="amount" value="${expense.amount}">${localPretty(expense.amount)}</data>
     <span class="description">
-      paid by
+      bezahlt von
       <span class="creditor">${expense.creditor}</span>
       <span class="participants ${isForAll ? 'all' : ''}">for ${smartList(expense.participants, members)}</span>
     </span>
@@ -81,16 +81,16 @@ function list(_items) {
     case 1:
       return items[0]
     case 2:
-      return items.join(' and ')
+      return items.join(' und ')
     default:
       const last = items.pop()
-      return [].concat(items, `and ${last}`).join(', ')
+      return [].concat(items, `und ${last}`).join(', ')
   }
 }
 
 function smartList(participants, members) {
   if (participants.length === members.length) {
-    return 'everyone'
+    return 'jedem'
   }
 
   if (participants.length <= 2) {
@@ -98,7 +98,7 @@ function smartList(participants, members) {
   }
 
   if (participants.length > 0.66 * members.length) {
-    return 'everyone but ' + list(members.filter(m => participants.indexOf(m) === -1))
+    return 'jedem ausser ' + list(members.filter(m => participants.indexOf(m) === -1))
   }
 
   return list(participants)
