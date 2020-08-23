@@ -26,7 +26,7 @@ const routes = [
   ['workerupdate', () => {
     showNotification({
       message: 'Bordkasse wurde im Hintergrund aktualisiert',
-      controls: ['Reload']
+      controls: ['Neu laden']
     }).then(_ => location.reload())
   }]
 ]
