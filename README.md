@@ -1,4 +1,4 @@
-# Freecount
+# Bordkasse.de forked from Freecount by ssimono
 
 The progressive web app to share expenses among friends, useful for trips, shared living, restaurants and what not!
 
