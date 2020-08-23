@@ -68,7 +68,7 @@ function expenseItem (expense, members, flag = '') {
     <span class="description">
       bezahlt von
       <span class="creditor">${expense.creditor}</span>
-      <span class="participants ${isForAll ? 'all' : ''}">for ${smartList(expense.participants, members)}</span>
+      <span class="participants ${isForAll ? 'all' : ''}">an ${smartList(expense.participants, members)}</span>
     </span>
     <time date="${expense.date}">${(new Date(expense.date)).toDateString().slice(0, -5)}</time>
   </li>`
